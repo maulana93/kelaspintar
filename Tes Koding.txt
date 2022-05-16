@@ -1,0 +1,65 @@
+﻿1. Jawaban soal 1
+        <?php
+$n = 13;
+$a = 1;
+for($i=1;$i<=100;$i++){
+ if($i%3==0 || $i%7==0){
+  if($a<=$n){
+   if($i%3==0 && $i%7==0){
+    echo '<b>Z</b> ';
+   } else {
+    echo $i." ";
+   }
+   $a++;
+  }
+ }
+}
+?>
+
+
+2. Jawaban soal 2
+        <?php
+$input = 'Berikut adalah kisah sang gajah. Sang gajah memiliki teman serigala bernama DoeSang. Gajah sering dibela oleh serigala ketika harimau mendekati gajah.';
+
+
+$search_1 = 'sang gajah';
+$search_2 = 'serigala';
+$search_3 = 'harimau';
+
+
+$output = '';
+
+
+if (strpos($input, $search_1)) {
+        $output = $search_1;
+} if (strpos($input, $search_2)) {
+        $output .= " - ".$search_2;
+} if (strpos($input, $search_3)) {
+        $output .= " - ".$search_3;
+}
+
+
+echo $output;
+?>
+
+
+
+
+
+
+
+
+ 
+3. Jawaban soal 3
+<?php
+$password = 'Maulana123!';
+
+
+if(!preg_match('/^(?=.*\d)(?=.*[A-Za-z])(?=.*[!@#$%])[0-9A-Za-z!@#$%]{8,32}$/', $password)) {
+    echo 'Kata sandi harus 8-32 karakter, Harus memiliki angka, Harus memiliki huruf kapital dan huruf kecil, Harus memiliki simbol';
+}
+else 
+{
+ echo 'password valid';
+}
+?>
